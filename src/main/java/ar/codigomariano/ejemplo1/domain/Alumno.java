@@ -1,11 +1,18 @@
 package ar.codigomariano.ejemplo1.domain;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "alumno")
 public class Alumno extends Usuario {
 	
 	private String numeroLegajo;
 	private String curso;
 	private String division;
 	private String turno;
+	
+	protected Alumno() {
+	}
 	
 	public Alumno(
 	        String nombre,

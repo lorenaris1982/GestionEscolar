@@ -1,11 +1,20 @@
 package ar.codigomariano.ejemplo1.domain;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class Usuario {
 	
 	public static final String ESTADO_PENDIENTE = "PENDIENTE";
 	public static final String ESTADO_ACTIVO = "ACTIVO";
 	public static final String ESTADO_RECHAZADO = "RECHAZADO";
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String estado;
     private String nombre;
     private String apellido;
@@ -14,7 +23,8 @@ public abstract class Usuario {
     private String mail;
     private String telefono;
     
-
+    protected Usuario() {
+    }
     public Usuario(String nombre, String apellido, String dni) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -53,5 +63,11 @@ public abstract class Usuario {
     }
     
     public abstract void mostrarRol();
+    
+    public Long getId() {
+        return id;
+    }
 }
+
+
 
