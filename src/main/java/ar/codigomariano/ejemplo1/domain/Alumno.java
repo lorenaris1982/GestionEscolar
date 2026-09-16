@@ -31,6 +31,24 @@ public class Alumno extends Usuario {
 	    this.turno = turno;
 	}
 	
+	public String getNumeroLegajo() {
+	    return numeroLegajo;
+	}
+	
+	public String getCurso() {
+	    return curso;
+	}
+	
+	public String getDivision() {
+	    return division;
+	}
+	
+	public String getTurno() {
+	    return turno;
+	}
+	
+	
+	
 	public void mostrarDatosAcademicos() {
 	    System.out.println("Legajo: " + numeroLegajo);
 	    System.out.println("Curso: " + curso);

@@ -22,17 +22,17 @@ public class GestionEscolarApplication {
             Alumno alumno = new Alumno(
                     "Ana",
                     "Perez",
-                    "33444555",
-                    "A001",
+                    "34567898",
+                    "34567898",
                     "5",
                     "A",
                     "Mañana"
             );
 
-            alumno.completarDatos(
-                    "15/05/2010",
+            alumno.completarDatos(  
+                    "31/05/2010", 
                     "ana@email.com",
-                    "1122334455"
+                    "11223348"
             );
 
             Alumno guardado = alumnoService.guardar(alumno);

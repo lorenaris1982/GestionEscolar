@@ -52,6 +52,20 @@ public abstract class Usuario {
         return dni;
     }
     
+    public String getMail() {
+        return mail;
+    }
+    
+    public String getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+    
+    public String getTelefono() {
+        return telefono;
+    }
+    
+    
+    
     public void mostrarInformacion() {
         System.out.println("Nombre: " + nombre);
         System.out.println("Apellido: " + apellido);
