@@ -158,7 +158,28 @@ public class AlumnoService {
     
     public List<Alumno> listarTodos() {
         return alumnoRepository.findAll();
+        
     }
     
+    public Alumno buscarPorDniYContrasena(String dni, String contrasena) {
+
+        return alumnoRepository
+                .findByDniAndContrasena(dni, contrasena)
+                .orElse(null);
+    }
+    
+    public Alumno actualizarDatosContacto(Long id, String mail, String telefono) {
+
+        Alumno alumno = alumnoRepository.findById(id)
+                .orElseThrow(() -> new AlumnoInvalidoException("Alumno no encontrado"));
+
+        alumno.completarDatos(
+                alumno.getFechaNacimiento(),
+                mail,
+                telefono
+        );
+
+        return alumnoRepository.save(alumno);
+    }
     
 }

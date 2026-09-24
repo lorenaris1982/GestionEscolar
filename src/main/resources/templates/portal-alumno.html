@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portal del Alumno</title>
+</head>
+
+<body>
+
+    <h1>Portal del Alumno</h1>
+
+    <h2 th:text="'Bienvenido/a ' + ${alumno.nombre} + ' ' + ${alumno.apellido}"></h2>
+
+    <h3>Mis datos</h3>
+
+    <p th:text="'DNI: ' + ${alumno.dni}"></p>
+    <p th:text="'Legajo: ' + ${alumno.numeroLegajo}"></p>
+    <p th:text="'Curso: ' + ${alumno.curso}"></p>
+    <p th:text="'División: ' + ${alumno.division}"></p>
+    <p th:text="'Turno: ' + ${alumno.turno}"></p>
+    <p th:text="'Mail: ' + ${alumno.mail}"></p>
+    <p th:text="'Teléfono: ' + ${alumno.telefono}"></p>
+    
+    <br>
+
+    <a href="/alumno/modificar">Modificar mis datos</a>
+
+</body>
+
+</html>

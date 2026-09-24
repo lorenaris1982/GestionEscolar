@@ -10,6 +10,7 @@ public class Alumno extends Usuario {
 	private String curso;
 	private String division;
 	private String turno;
+	private String contrasena;
 	
 	protected Alumno() {
 	}
@@ -47,6 +48,14 @@ public class Alumno extends Usuario {
 	    return turno;
 	}
 	
+	public String getContrasena() {
+	    return contrasena;
+	}
+	
+	
+	public void setContrasena(String contrasena) {
+	    this.contrasena = contrasena;
+	}
 	
 	
 	public void mostrarDatosAcademicos() {
